@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="780" viewBox="0 0 640 780">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E50914"/>
+      <stop offset="100%" stop-color="#B0060F"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="780" fill="url(#bg)"/>
+  <rect x="0" y="0" width="640" height="6" fill="url(#accent)"/>
+  <rect x="0" y="774" width="640" height="6" fill="url(#accent)"/>
+  <!-- Silhouette -->
+  <circle cx="320" cy="300" r="110" fill="#2a2a2a"/>
+  <path d="M 130 780 Q 130 520 320 520 Q 510 520 510 780 Z" fill="#2a2a2a"/>
+  <!-- Camera / plus hint -->
+  <circle cx="320" cy="300" r="130" fill="none" stroke="#3a3a3a" stroke-width="2" stroke-dasharray="8 6"/>
+  <g stroke="#E50914" stroke-width="6" stroke-linecap="round">
+    <line x1="320" y1="240" x2="320" y2="360"/>
+    <line x1="260" y1="300" x2="380" y2="300"/>
+  </g>
+  <text x="320" y="640" font-family="Arial, sans-serif" font-size="26" fill="#666666" text-anchor="middle" font-weight="bold" letter-spacing="4">YOUR PHOTO HERE</text>
+  <text x="320" y="680" font-family="monospace" font-size="15" fill="#444444" text-anchor="middle" letter-spacing="1">src/assets/Portfolio/picture.svg</text>
+</svg>
