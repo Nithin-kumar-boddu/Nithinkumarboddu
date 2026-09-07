@@ -54,7 +54,7 @@ const Hero = () => {
     )
     .fromTo(
       card,
-      { scale: 0.75, opacity: 0, rotationY: 35, rotationX: -15 },
+      { scale: 0.75, opacity: 0, rotationY: 20, rotationX: -10 },
       { scale: 1, opacity: 1, rotationY: 0, rotationX: 0, duration: 1.4, ease: "back.out(1.2)" },
       "-=0.9"
     );
@@ -259,8 +259,8 @@ const Hero = () => {
           </div>
 
           {/* Center: Interactive 3D Holographic Tilt Developer Poster Frame */}
-          <div className="lg:col-span-4 flex justify-center perspective-[1200px]">
-            <div 
+          <div className="lg:col-span-4 flex justify-center mx-auto perspective-[1200px]">
+            <div
               ref={cardRef}
               className="relative group transform-gpu transition-transform duration-100 ease-out will-change-transform"
             >
