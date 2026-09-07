@@ -201,10 +201,10 @@ const Hero = () => {
         </div>
 
         {/* Main Center Cinematic Stage Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-10 lg:gap-8 my-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-8 md:gap-10 lg:gap-8 my-auto">
 
           {/* Left Side: Developer Story & Description */}
-          <div className="lg:col-span-5 flex flex-col items-start space-y-5 text-left order-1">
+          <div className="order-1 lg:col-span-5 flex flex-col items-start space-y-4 md:space-y-5 text-left">
 
             <h1 className="hero-anim-item text-5xl md:text-7xl font-black tracking-tighter leading-[0.95] drop-shadow-[0_15px_30px_rgba(0,0,0,0.9)]">
               <span className="block">
@@ -265,33 +265,33 @@ const Hero = () => {
             >
               {/* Cinematic Red Neon Back Glow */}
               <div className="absolute -inset-3 bg-gradient-to-r from-red-600/70 via-rose-600/40 to-purple-600/20 rounded-3xl blur-3xl opacity-90 group-hover:opacity-100 animate-pulse duration-1000"></div>
-              
+
               {/* Poster Card with Glossy Sheen */}
-              <div className="relative w-[280px] md:w-[320px] p-3.5 bg-[#141414]/90 backdrop-blur-2xl rounded-2xl border border-red-600/40 shadow-[0_40px_80px_rgba(0,0,0,0.95)] overflow-hidden">
-                
+              <div className="relative w-[240px] sm:w-[260px] md:w-[320px] p-3 md:p-3.5 bg-[#141414]/90 backdrop-blur-2xl rounded-2xl border border-red-600/40 shadow-[0_40px_80px_rgba(0,0,0,0.95)] overflow-hidden">
+
                 {/* Dynamic Specular Glare Layer */}
-                <div 
+                <div
                   ref={glareRef}
                   className="absolute inset-[-50%] w-[200%] h-[200%] bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none transform-gpu z-40"
                 ></div>
 
                 {/* Netflix Series Tag */}
-                <div className="absolute top-6 left-6 z-30 px-3 py-1 bg-red-600 text-white font-mono text-[10px] font-bold tracking-widest rounded shadow-xl">
+                <div className="absolute top-4 left-4 md:top-6 md:left-6 z-30 px-2.5 md:px-3 py-1 bg-red-600 text-white font-mono text-[9px] md:text-[10px] font-bold tracking-widest rounded shadow-xl">
                   FEATURED DEV
                 </div>
 
                 <img
                   src={pictureImg}
                   alt="Developer Portrait"
-                  className="w-full h-[330px] md:h-[390px] object-cover rounded-xl filter contrast-125 brightness-105 group-hover:scale-[1.02] transition-transform duration-500"
+                  className="w-full h-[280px] sm:h-[300px] md:h-[390px] object-cover rounded-xl filter contrast-125 brightness-105 group-hover:scale-[1.02] transition-transform duration-500"
                 />
               </div>
             </div>
           </div>
 
           {/* Right Side: Technical Specs & Stack */}
-          <div className="hero-anim-item lg:col-span-3 flex flex-col items-start lg:items-end space-y-4 text-left lg:text-right">
-            <div className="p-5 bg-black/80 backdrop-blur-2xl border border-white/15 rounded-xl shadow-2xl max-w-xs">
+          <div className="hero-anim-item order-3 lg:col-span-3 flex flex-col items-start lg:items-end space-y-4 text-left lg:text-right">
+            <div className="p-4 md:p-5 bg-black/80 backdrop-blur-2xl border border-white/15 rounded-xl shadow-2xl max-w-xs w-full">
               <h3 className="text-xs font-mono uppercase tracking-widest text-red-500 font-bold mb-2">Core Stack & Awards</h3>
               <p className="text-xs text-white/80 leading-relaxed font-light">
                 {YOUR_AWARDS}

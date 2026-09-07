@@ -58,10 +58,10 @@ const Expertise = () => {
       if (index === cards.length - 1) return; // Keep the top-most card fully focused
 
       gsap.to(card, {
-        scale: 0.92 - index * 0.025,
-        y: -15 - index * 8,
-        filter: "blur(6px)",
-        opacity: 0.4,
+        scale: 0.94 - index * 0.02,
+        y: -10 - index * 6,
+        filter: "blur(4px)",
+        opacity: 0.55,
         scrollTrigger: {
           trigger: card,
           start: `top ${90 + index * 20}px`,
@@ -136,10 +136,10 @@ const Expertise = () => {
             <div
               key={index}
               ref={addToRefs}
-              className={`sticky w-full p-6 md:p-8 rounded-2xl bg-gradient-to-br ${item.gradient} backdrop-blur-2xl border border-white/10 shadow-[0_20px_45px_rgba(0,0,0,0.85)] flex flex-col justify-between min-h-[230px] md:min-h-[250px] transform-gpu transition-all overflow-hidden group hover:border-red-600/50`}
+              className={`sticky w-full p-5 md:p-8 rounded-2xl bg-gradient-to-br ${item.gradient} backdrop-blur-2xl border border-white/10 shadow-[0_20px_45px_rgba(0,0,0,0.85)] flex flex-col justify-between min-h-[210px] md:min-h-[250px] transform-gpu transition-all overflow-hidden group hover:border-red-600/50`}
               style={{
                 zIndex: index + 1,
-                top: `${95 + index * 16}px`
+                top: `${75 + index * 12}px`
               }}
             >
               {/* Dynamic Mouse Spotlight Highlight */}
