@@ -186,29 +186,25 @@ const Hero = () => {
       ></div>
 
       {/* 3. Main Content Layer */}
-      <div ref={contentRef} className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-12 h-full flex flex-col justify-between pt-24 pb-12">
-        
+      <div ref={contentRef} className="relative z-20 w-full max-w-7xl mx-auto px-5 md:px-12 min-h-screen flex flex-col justify-start md:justify-between pt-24 pb-16 gap-10 md:gap-0">
+
         {/* Top Netflix Cinematic Badge */}
         <div className="hero-anim-item flex items-center justify-between w-full">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded bg-black/80 backdrop-blur-2xl border border-red-600/40 text-xs font-mono uppercase tracking-widest text-white shadow-2xl">
+          <div className="inline-flex flex-wrap items-center gap-2 px-3 md:px-4 py-1.5 rounded bg-black/80 backdrop-blur-2xl border border-red-600/40 text-[10px] md:text-xs font-mono uppercase tracking-widest text-white shadow-2xl max-w-full">
             <span className="w-2 h-2 rounded-full bg-red-600 animate-ping"></span>
-            <span className="text-red-500 font-bold tracking-wider">AI PRODUCT ENGINEERING</span>
-            <span className="text-white/40">|</span>
-            <span className="text-white/80">BUILDING • LEARNING • SHIPPING</span>
+            <span className="text-red-500 font-bold tracking-wider whitespace-nowrap">AI PRODUCT ENGINEER</span>
+            <span className="text-white/40 hidden sm:inline">|</span>
+            <span className="text-white/80 hidden sm:inline">BUILDING • LEARNING • SHIPPING</span>
           </div>
           <div className="hidden md:flex items-center gap-2 text-xs font-mono text-white/50 tracking-wider">
           </div>
         </div>
 
         {/* Main Center Cinematic Stage Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-8 my-auto">
-          
+        <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-10 lg:gap-8 my-auto">
+
           {/* Left Side: Developer Story & Description */}
-          <div className="lg:col-span-5 flex flex-col items-start space-y-5 text-left">
-            
-            <div className="hero-anim-item flex items-center gap-3">
-              <span className="text-white/80 text-xs font-mono tracking-widest uppercase">{YOUR_ROLE}</span>
-            </div>
+          <div className="lg:col-span-5 flex flex-col items-start space-y-5 text-left order-1">
 
             <h1 className="hero-anim-item text-5xl md:text-7xl font-black tracking-tighter leading-[0.95] drop-shadow-[0_15px_30px_rgba(0,0,0,0.9)]">
               <span className="block">
@@ -217,16 +213,19 @@ const Hero = () => {
               </span>
               <span className="block text-white">{YOUR_NAME_LAST}</span>
             </h1>
+
             <div className="hero-anim-item text-base md:text-2xl font-black uppercase tracking-[0.25em] text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-rose-600 to-red-700 drop-shadow-[0_0_20px_rgba(220,38,38,0.45)]">
               {YOUR_TAGLINE}
             </div>
 
-            <div className="hero-anim-item flex items-center gap-3 text-xs font-mono text-red-400 font-bold">
-              <span className="px-2 py-0.5 bg-red-500/10 border border-red-500/30 rounded text-red-500">BUILDING • SHIPPING • ITERATING</span>
-              <span className="text-white/40">•</span>
-              <span>{YOUR_STACK[0]} • {YOUR_STACK[1]} • {YOUR_STACK[2]}</span>
-              <span className="text-white/40">•</span>
-              <span className="text-white/70">AI-ASSISTED DEVELOPMENT</span>
+            <div className="hero-anim-item text-white/80 text-xs md:text-sm font-mono tracking-widest uppercase">
+              {YOUR_ROLE}
+            </div>
+
+            <div className="hero-anim-item flex flex-col gap-2 text-[11px] md:text-xs font-mono text-red-400 font-bold w-full">
+              <span className="self-start px-2 py-0.5 bg-red-500/10 border border-red-500/30 rounded text-red-500">BUILDING • SHIPPING • ITERATING</span>
+              <span className="text-white/80">{YOUR_STACK[0]} • {YOUR_STACK[1]} • {YOUR_STACK[2]}</span>
+              <span className="text-white/60">AI-ASSISTED DEVELOPMENT</span>
             </div>
 
             <p className="hero-anim-item text-sm md:text-base text-white/80 font-light leading-relaxed max-w-md drop-shadow">
@@ -234,10 +233,10 @@ const Hero = () => {
             </p>
 
             {/* Action Button Set */}
-            <div className="hero-anim-item flex items-center gap-4 pt-2">
+            <div className="hero-anim-item flex items-center gap-3 md:gap-4 pt-2 w-full md:w-auto">
               <a
                 href="#products"
-                className="px-8 py-3.5 bg-white text-black font-bold text-xs uppercase tracking-widest rounded hover:bg-red-600 hover:text-white transition-all duration-300 shadow-[0_10px_35px_rgba(255,255,255,0.3)] flex items-center gap-2 hover:scale-105 active:scale-95"
+                className="flex-1 md:flex-none px-5 md:px-8 py-3 md:py-3.5 bg-white text-black font-bold text-[11px] md:text-xs uppercase tracking-widest rounded hover:bg-red-600 hover:text-white transition-all duration-300 shadow-[0_10px_35px_rgba(255,255,255,0.3)] flex items-center justify-center gap-2 hover:scale-105 active:scale-95"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                   <path d="M8 5v14l11-7z" />
@@ -246,7 +245,7 @@ const Hero = () => {
               </a>
               <a
                 href="#contact"
-                className="px-8 py-3.5 bg-neutral-900/80 text-white border border-white/20 font-bold text-xs uppercase tracking-widest rounded hover:bg-neutral-800 transition-all duration-300 shadow-xl backdrop-blur-md flex items-center gap-2 hover:scale-105 active:scale-95"
+                className="flex-1 md:flex-none px-5 md:px-8 py-3 md:py-3.5 bg-neutral-900/80 text-white border border-white/20 font-bold text-[11px] md:text-xs uppercase tracking-widest rounded hover:bg-neutral-800 transition-all duration-300 shadow-xl backdrop-blur-md flex items-center justify-center gap-2 hover:scale-105 active:scale-95"
               >
                 <svg className="w-4 h-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
                   <circle cx="12" cy="12" r="10" />
@@ -259,7 +258,7 @@ const Hero = () => {
           </div>
 
           {/* Center: Interactive 3D Holographic Tilt Developer Poster Frame */}
-          <div className="lg:col-span-4 flex justify-center mx-auto perspective-[1200px]">
+          <div className="order-2 lg:col-span-4 flex justify-center mx-auto perspective-[1200px]">
             <div
               ref={cardRef}
               className="relative group transform-gpu transition-transform duration-100 ease-out will-change-transform"
@@ -303,7 +302,7 @@ const Hero = () => {
         </div>
 
         {/* Bottom Cinematic Ticker */}
-        <div className="hero-anim-item flex items-center justify-between text-xs font-mono text-white/50 tracking-widest uppercase">
+        <div className="hero-anim-item flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-0 text-[10px] md:text-xs font-mono text-white/50 tracking-widest uppercase">
           <span>FROM IDEA TO WORKING PRODUCT</span>
           <span>[ BUILD • TEST • ITERATE ]</span>
         </div>
@@ -321,8 +320,8 @@ const Hero = () => {
       ></div>
 
       {/* --- NETFLIX-THEMED DEVELOPER NAVBAR --- */}
-      <header className="absolute top-0 left-0 z-50 w-full max-w-7xl mx-auto px-6 md:px-12 py-6 flex items-center justify-between pointer-events-auto">
-        <div className="text-2xl font-black text-red-600 tracking-tighter flex items-center gap-2 drop-shadow-[0_2px_15px_rgba(229,9,20,0.9)]">
+      <header className="absolute top-0 left-0 z-50 w-full max-w-7xl mx-auto px-5 md:px-12 py-5 md:py-6 flex items-center justify-between pointer-events-auto">
+        <div className="text-xl md:text-2xl font-black text-red-600 tracking-tighter flex items-center gap-2 drop-shadow-[0_2px_15px_rgba(229,9,20,0.9)] whitespace-nowrap">
           {YOUR_NAME_FIRST}<span className="w-1.5 h-1.5 rounded-full bg-white inline-block"></span>
         </div>
         <nav className="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-widest text-white/80">
